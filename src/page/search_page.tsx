@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
+import * as crawl from '../functions/crawl';
 
 function SearchPage() {
   const [searchResult, setSearchResult] = useState([]);
+
+  crawl.getHTML("https://www.naver.com").then((data: String) => {
+    console.log(data);
+  });
 
   return (
     <div>
